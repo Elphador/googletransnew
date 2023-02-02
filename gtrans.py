@@ -19,6 +19,9 @@ class Translator ( ):
         detected = detec_t.text
         #Romanization works only for supported languages so it'll may retrieve None for rare languages     romanization = clarify.find("span" , id="tw-answ-source-romanization")
         b_romanz =  clarify.find("span", id= "tw-answ-romanization")  
+        romanization = clarify.find("span", id="tw-answ-source-romanization")
+
+   
         roman = romanization.text 
         b_roman = b_romanz.text
         result = clarify.find("span",id="tw-answ-target-text")
